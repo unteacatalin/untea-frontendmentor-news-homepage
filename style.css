@@ -1,0 +1,338 @@
+@font-face {
+  font-family: 'inter';
+  src: url('./assets/fonts/Inter-VariableFont_slnt\,wght.ttf')
+    format('truetype-variations');
+  font-weight: 1 999;
+}
+
+:root {
+  /* COLORS */
+
+  /* Primary */
+
+  --PRIMARY-SOFT-ORANGE: hsl(35, 77%, 62%);
+  --PRIMARY-SOFT-RED: hsl(5, 85%, 63%);
+
+  /* Neutral */
+
+  --OFF-WHITE: hsl(36, 100%, 99%);
+  --GRAYISH-BLUE: hsl(233, 8%, 79%);
+  --DARK-GRAYISH-BLUE: hsl(236, 13%, 42%);
+  --VERY-DARK-BLUE: hsl(240, 100%, 5%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--OFF-WHITE);
+  font-family: 'inter';
+  font-size: 15px;
+  margin: 5% 10%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+}
+
+header .topnav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 0;
+}
+
+.header-img {
+  height: 40px;
+}
+
+.header-navigation {
+  margin: auto 0;
+  display: block;
+  height: 40px;
+}
+
+.header-navigation a:hover,
+.header-navigation a:focus {
+  color: var(--PRIMARY-SOFT-RED);
+}
+
+.header-navigation ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.header-navigation li {
+  padding-left: 24px;
+}
+
+.header-navigation a {
+  color: var(--DARK-GRAYISH-BLUE);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: var(--OFF-WHITE);
+  position: relative;
+  width: 40px;
+  min-height: 40px;
+  display: none;
+}
+
+header #menuLinks {
+  display: none;
+}
+
+header #menuLinks a {
+  display: none;
+}
+
+header #menuLinks hr {
+  display: none;
+}
+
+.topnav a {
+  color: var(--DARK-GRAYISH-BLUE);
+  text-decoration: none;
+  font-size: 15px;
+  align-self: center;
+}
+
+.topnav a.icon {
+  align-self: center;
+}
+
+.topnav a.icon img {
+  width: 20px;
+  height: 20px;
+}
+
+main {
+  margin: 2rem 0;
+}
+
+.main-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    'img img side'
+    'h p side'
+    'card1 card2 card3';
+  grid-gap: 40px;
+}
+
+.main-section .hero-container {
+  background-image: url('./assets//images/image-web-3-desktop.jpg');
+  background-size: cover;
+  background-repeat: cover;
+  grid-area: img;
+  height: 300px;
+  margin: 0;
+}
+
+.main-section h1 {
+  grid-area: h;
+  font-weight: 800;
+  font-size: 3rem;
+  color: var(--VERY-DARK-BLUE);
+  padding-right: 5rem;
+  line-height: 110%;
+}
+
+.main-section .main-p {
+  grid-area: p;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.main-section .main-p p {
+  color: var(--DARK-GRAYISH-BLUE);
+  line-height: 25px;
+  margin-right: 1rem;
+  font-weight: 400;
+}
+
+.main-section .main-p .read-more-button {
+  color: var(--OFF-WHITE);
+  background-color: var(--PRIMARY-SOFT-RED);
+  padding: 1rem 2rem;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.main-section .main-p .read-more-button:hover {
+  background-color: var(--VERY-DARK-BLUE);
+  cursor: pointer;
+}
+
+.aside {
+  grid-area: side;
+  padding: 2rem 6%;
+  background-color: var(--VERY-DARK-BLUE);
+}
+
+.aside h2 {
+  font-size: 2rem;
+  color: var(--PRIMARY-SOFT-ORANGE);
+  margin-bottom: 1.5rem;
+}
+
+.aside dt {
+  font-weight: 700;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  margin-bottom: 0.75rem;
+}
+
+.aside a:any-link {
+  color: var(--OFF-WHITE);
+}
+
+.aside a:hover {
+  color: var(--PRIMARY-SOFT-ORANGE);
+}
+
+.aside dd {
+  color: var(--GRAYISH-BLUE);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 25px;
+}
+.aside hr {
+  margin-block: 2rem;
+}
+
+.card {
+  margin-top: 2rem;
+}
+
+.card1 {
+  grid-area: card1;
+}
+
+.card img {
+  float: left;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+}
+
+.card-counter {
+  display: block;
+  font-size: 2rem;
+  opacity: 0.2;
+}
+
+.card a:any-link {
+  color: var(--VERY-DARK-BLUE);
+}
+
+.card a:hover {
+  color: var(--PRIMARY-SOFT-RED);
+}
+
+.card p {
+  margin-block: 1rem;
+  line-height: 200%;
+  font-weight: 400;
+  color: var(--DARK-GRAYISH-BLUE);
+}
+
+.card2 {
+  grid-area: card2;
+}
+
+.card3 {
+  grid-area: card3;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a:any-link {
+  color: var(--DARK-GRAYISH-BLUE);
+}
+.attribution a:hover,
+.attribution a:focus {
+  color: var(--PRIMARY-SOFT-RED);
+}
+
+@media screen and (max-width: 1440px) {
+  .header-navigation {
+    display: none;
+  }
+
+  header .topnav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header #menuLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--VERY-DARK-BLUE);
+  }
+
+  header #menuLinks a {
+    line-height: 40px;
+    color: var(--OFF-WHITE);
+    font-weight: 700;
+    display: block;
+  }
+
+  header #menuLinks a:hover,
+  header #menuLinks a:focus {
+    color: var(--PRIMARY-SOFT-ORANGE);
+  }
+
+  header #menuLinks hr {
+    display: block;
+    width: 100%;
+  }
+
+  .main-section {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'img'
+      'h'
+      'p'
+      'side'
+      'card1'
+      'card2'
+      'card3';
+    grid-gap: 40px;
+  }
+
+  body {
+    margin: 5% 20px;
+  }
+} ;
