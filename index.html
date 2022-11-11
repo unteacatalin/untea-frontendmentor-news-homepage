@@ -6,6 +6,12 @@
     <!-- displays site properly based on user's device -->
 
     <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome/css/fontawesome.min.css"
+    />
+    <link rel="stylesheet" href="./assets/fonts/fontawesome/css/solid.css" />
+
+    <link
       rel="icon"
       type="image/png"
       sizes="32x32"
@@ -44,8 +50,8 @@
         </nav>
         <div class="topnav">
           <a href="javascript:void(0);" class="icon" onClick="expandFn()"
-            ><img id="topnavIcon" src="assets/images/icon-menu.svg" alt="menu"
-          /></a>
+            ><i id="navFavIcon" class="fa-solid fa-bars"></i
+          ></a>
         </div>
       </div>
       <div id="menuLinks">
@@ -102,33 +108,33 @@
         </aside>
 
         <div class="card card1">
-          <img src="./assets/images/image-retro-pcs.jpg" />
+          <img src="./assets/images/image-retro-pcs.jpg" alt="retro pcs" />
           <div class="card-text">
             <h3>
               <span class="card-counter">01</span>
-              <br />
               <a href="#">Reviving Retro PCs</a>
             </h3>
             <p>What happens when old PCs are given modern upgrades?</p>
           </div>
         </div>
         <div class="card card2">
-          <img src="./assets/images/image-top-laptops.jpg" />
+          <img src="./assets/images/image-top-laptops.jpg" alt="top laptops" />
           <div class="card-text">
             <h3>
               <span class="card-counter">02</span>
-              <br />
               <a href="#">Top 10 Laptops of 2022</a>
             </h3>
             <p>Our best picks for various needs and budgets.</p>
           </div>
         </div>
         <div class="card card3">
-          <img src="./assets/images/image-gaming-growth.jpg" />
+          <img
+            src="./assets/images/image-gaming-growth.jpg"
+            alt="gaming growth"
+          />
           <div class="card-text">
             <h3>
               <span class="card-counter">03</span>
-              <br />
               <a href="#">The Growth of Gaming</a>
             </h3>
             <p>How the pandemic has sparked fresh opportunities.</p>
@@ -148,13 +154,13 @@
     <script>
       function expandFn() {
         var x = document.getElementById('menuLinks');
-        var y = document.getElementById('topnavIcon');
+        var z = document.getElementById('navFavIcon');
         if (x.style.display == 'flex') {
           x.style.display = 'none';
-          y.src = './assets/images/icon-menu.svg';
+          z.className = 'fa-solid fa-bars';
         } else {
           x.style.display = 'flex';
-          y.src = './assets/images/icon-menu-close.svg';
+          z.className = 'fa-solid fa-xmark';
         }
       }
     </script>
